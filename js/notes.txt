@@ -1,0 +1,1 @@
+slide waits 4s before it changes so i need to have a timer that gets triggered when the slide changes and wait for some time then change my cta bottom 0 css;

@@ -308,13 +308,13 @@ header nav ul li a {
 #features {
   position: absolute;
   top: 0;
-  transition: top 600ms ease-in;
+  transition: top 300ms ease-in;
 }
 
 #features ul > .highlight__feature {
   color: var(--firey-rose);
   font-weight: 700;
-  text-indent: 10px;
+  text-indent: 5px;
   transition: all 300ms linear;
 }
 

@@ -131,7 +131,7 @@
         let currentCta = 1;
         let leftPosition = 0;
 
-        let slideInterval = 8500;
+        const slideInterval = 8500;
 
         let doneResizing;
 
@@ -162,7 +162,7 @@
                     const cta = document.querySelector(".slide1 .cta");
                     cta.style.bottom = 0;
 
-                }, 1200);
+                }, 1300);
 
                 const ctas = document.querySelectorAll(".cta");
                 ctas.forEach(cta =>
@@ -330,13 +330,18 @@
         {
 
             featureList.removeChild(featureList.firstElementChild);
-            topPosition = 0;
-            
+
             const clone = featureList.firstElementChild.cloneNode(true);
-            featureList.insertAdjacentElement("beforeend", clone);
-            featureList.style.top = topPosition;
 
             counter = 0;
+            topPosition = 0;
+            featureList.style.top = topPosition;
+            featureList.style.transition = "none";
+            featureList.insertAdjacentElement("beforeend", clone);
+            setTimeout(() =>
+            {
+                featureList.style.transition = "top 300ms ease-in";
+            }, 200);
         } else
         {
             const feature = document.querySelector(`.eachfeature > li:nth-child(${counter})`);
@@ -348,8 +353,6 @@
                 featureList.style.top = topPosition;
             }, 1500);
         }
-
-
 
     }, 2500);
 
